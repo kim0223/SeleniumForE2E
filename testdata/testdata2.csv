@@ -1,0 +1,4 @@
+account,password,type,result
+wermoet4asdfccccc@pchome.com.tw,333njru04fup,pass,pass
+moowmt4asdfccccc@pchome.com.tw,333njru04fup,fail,pass
+cascsccasf@pchome.com.tw,444njru04fup,fail,"登入失敗, 電子郵件位址與密碼是否正確。"
