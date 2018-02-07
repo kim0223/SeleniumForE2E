@@ -10,8 +10,7 @@ import unittest, time, re
 import MySQLdb
 #引入HTMLTestRunner包
 import HTMLTestRunner
-import csv
-import threading
+
 class PCHOME_LOGIN(unittest.TestCase):
     '''PChome login'''
 #初始化设置
@@ -20,8 +19,8 @@ class PCHOME_LOGIN(unittest.TestCase):
      self.driver.implicitly_wait(10)
      self.verificationErrors = []
      self.accept_next_alert = True
+    
     def test_case1(self):
-
         #執行測試腳本
         driver = self.driver
         driver.get("https://buzzorange.com/techorange/2017/08/29/lindy-on-programming/")
@@ -45,18 +44,6 @@ class PCHOME_LOGIN(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
         self.assertEqual([], self.verificationErrors)
-def main():
-    #建立執行緒陣列
-    threads=[]
-    added_thread1 = threading.Thread(target=test_case1, name="T1")
-    #added_thread2 = threading.Thread(target=test_case2, name="T2")
-    threads.append(added_thread1)
-    #threads.append(added_thread2)
-    # 加入並執行執行緒
-    for t in threads:
-        t.start()
-    for t in threads:
-        t.join()
 if __name__ == "__main__":
     unittest.main()
     main()
