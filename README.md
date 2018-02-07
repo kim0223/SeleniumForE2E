@@ -1,6 +1,6 @@
-# SeleniumForE2E
-##包含以下類型測試範例
-###1.E2E TestCase using unittest framework
-*2.Data Driven Test(DDT) using CSV or MySQL
-3.Multi threads test
-4.API status verify
+###Python架構於Selenium 自動化測試下的範例如下
+-執行大量API運行狀態驗證
+-測試腳本讀取及驗證來自CSV的測試資料
+-測試腳本讀取及驗證來自MySQL的測試資料
+
+簡易架構如下
