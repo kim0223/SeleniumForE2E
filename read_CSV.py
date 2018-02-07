@@ -1,32 +1,29 @@
 import csv
+file_path="./testdata/"
+file_name="testdata2.csv"
 #取得CSV第一欄資料
-testdata1 = open("C:/Users/kim/AppData/Local/Programs/Python/Python36-32/testdata/testdata2.csv","r")
+testdata1 = open(file_path+file_name,"r")
 text1 = csv.DictReader(testdata1)
 account = [row['account'] for row in text1]
 # 取得CSV第二欄資料
-testdata2 = open("C:/Users/kim/AppData/Local/Programs/Python/Python36-32/testdata/testdata2.csv","r")
+testdata2 = open(file_path+file_name,"r")
 text2 = csv.DictReader(testdata2)
 password = [row['password'] for row in text2]
 # 取得CSV第三欄資料
-testdata3 = open("C:/Users/kim/AppData/Local/Programs/Python/Python36-32/testdata/testdata2.csv", "r")
+testdata3 = open(file_path+file_name,"r")
 text3 = csv.DictReader(testdata3)
-password = [row['type'] for row in text3]
+type = [row['type'] for row in text3]
 # 取得CSV第四欄資料
-testdata4 = open("C:/Users/kim/AppData/Local/Programs/Python/Python36-32/testdata/testdata2.csv", "r")
+testdata4 = open(file_path+file_name,"r")
 text4 = csv.DictReader(testdata4)
-password = [row['result'] for row in text4]
-testdata1 = open("testdata/testdata2.csv", "r")
-text = csv.DictReader(testdata1)
-account = [row['account'] for row in text]
-testdata2 = open("testdata/testdata2.csv", "r")
-text2 = csv.DictReader(testdata2)
-password = [row['password'] for row in text2]
-filename = "testdata/testdata2.csv"
-myfile = open(filename)
+result = [row['result'] for row in text4]
+
+#計算資料總行數
+myfile = open(file_path+file_name,"r")
 lines = len(myfile.readlines())
+#輸出所有資料行
 i=0
 j=lines-1
-while i< lines:
-    i+=1
-print(i,account[2],password[1])
-#print(lines)
+while i< j:
+    print(account[i],type[i],password[i],result[i])
+    i += 1
