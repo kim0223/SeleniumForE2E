@@ -23,7 +23,10 @@ class PCHOME_LOGIN(unittest.TestCase):
     def test_case1(self):
         '''登入驗證1'''
         #取得CSV第一欄資料
-        testdata1 = open("C:/Users/kim/AppData/Local/Programs/Python/Python36-32/testdata/testdata2.csv","r")
+        file_path = "./testdata/"
+        file_name = "testdata2.csv"
+        # 取得CSV第一欄資料
+        testdata1 = open(file_path + file_name, "r")
         text1 = csv.DictReader(testdata1)
         account = [row['account'] for row in text1]
         # 取得CSV第二欄資料
