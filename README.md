@@ -1,5 +1,5 @@
 **Python架構於Selenium 自動化測試範例如下
-
+https://github.com/DemoAutomationTest/SeleniumForE2E/tree/master/testcase
 - 執行大量API運行狀態驗證
 - 測試腳本讀取及驗證來自CSV的測試資料
 - 測試腳本讀取及驗證來自MySQL的測試資料
